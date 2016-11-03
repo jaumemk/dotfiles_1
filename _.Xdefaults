@@ -1,0 +1,59 @@
+! ------------------------------------------
+! Basic Color theme
+! ------------------------------------------
+
+*.foreground:   #d0d0d0
+*.background:   #151515
+*.cursorColor:  #d0d0d0
+
+! black
+*.color0:       #151515
+*.color8:       #505050
+
+! red
+*.color1:       #ac4142
+*.color9:       #ac4142
+
+! green
+*.color2:       #90a959
+*.color10:      #90a959
+
+! yellow
+*.color3:       #f4bf75
+*.color11:      #f4bf75
+
+! blue
+*.color4:       #6a9fb5
+*.color12:      #6a9fb5
+
+! magenta
+*.color5:       #aa759f
+*.color13:      #aa759f
+
+! cyan
+*.color6:       #75b5aa
+*.color14:      #75b5aa
+
+! white
+*.color7:       #d0d0d0
+*.color15:      #f5f5f5
+
+! ------------------------------------------
+! urxvt Color theme
+! ------------------------------------------
+
+URxvt.font:             xft:Hack:size=16
+URxvt.letterSpace:      -1
+URxvt.borderless:       1
+URxvt.scrollBar:        false
+URxvt.internalBorder:   25
+
+! -------------------------------------------
+! rofi Color theme
+! -------------------------------------------
+
+rofi.color-enabled:     true
+rofi.color-window:      argb:dd151515, #151515, #151515
+rofi.color-normal:      argb:00151515, #d0d0d0, argb:00151515, #ac4142, #d0d0d0
+rofi.color-active:      #ebebeb, #151515, #ebebeb, #90a959, #ebebeb
+rofi.color-urgent:      #151515, #dc322f, #151515, #dc322f, #ffffff

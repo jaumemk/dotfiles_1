@@ -1,2 +1,2 @@
 #!/bin/sh
-feh  --bg-fill '~/Environement/resources/public/default-wallpaper.png'
+feh  --bg-fill ~/Environement/resources/public/default-wallpaper.png

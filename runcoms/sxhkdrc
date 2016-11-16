@@ -1,3 +1,5 @@
+#! /bin/sh
+
 #   **********************
 #   wm independent hotkeys
 #   ----------------------
@@ -20,7 +22,7 @@ super + p
 #   make sxhkd reload its configuration files
 
 super + Escape
-    pkill -USR1 -x sxhkd
+    pkill -USR1 -x sxhkd; . ~/Environement/runcoms/bspwmrc
 
 #   backlight control
 

@@ -1,3 +1,5 @@
+#! /bin/sh
+
 # Disable right click area on Trackpad.
 synclient RightButtonAreaLeft=5400 &
 
@@ -17,11 +19,8 @@ pcmanfm -d &
 # Compositing manager
 compton -b &
 
-# monitor auto setup
-source ~/env/scripts/monitor &
-
 # Load shortcuts
-sxhkd &
+sxhkd -c ~/Environement/runcoms/sxhkdrc &
 
 # Load Window Manager
-exec bspwm
+exec bspwm -c ~/Environement/runcoms/bspwmrc

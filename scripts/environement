@@ -1,0 +1,4 @@
+#! /bin/sh
+
+. ~/Environement/scripts/monitor
+. ~/Environement/scripts/wallpaper

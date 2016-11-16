@@ -8,7 +8,7 @@ PANEL_WM_NAME=bspwm_panel
 export PANEL_FIFO PANEL_HEIGHT PANEL_FONT PANEL_WM_NAME
 
 if xdo id -a "$PANEL_WM_NAME" > /dev/null ; then
-    killall lemonbar &&
+    killall lemonbar
 fi
 
 trap 'trap - TERM; kill 0' INT TERM QUIT EXIT

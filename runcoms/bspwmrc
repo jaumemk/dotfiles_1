@@ -15,6 +15,6 @@ bspc config paddingless_monocle  true
 bspc config click_to_focus       true
 
 for m in $(bspc query -M); do
-    bspc monitor $m -d eins zwei drei vier fünf sechs sieben acht neun zhen
+    bspc monitor $m -d eins zwei drei vier fünf # sechs sieben acht neun zhen
     bspc config -m $m top_padding 40
 done

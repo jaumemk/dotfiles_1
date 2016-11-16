@@ -1,0 +1,12 @@
+#! /bin/sh
+
+extern=DP1
+intern=eDP1
+
+if xrandr | grep "$extern disconnected"; then
+    # default screen (eDP1)
+    xrandr --output "$extern" --off --output "$intern" --auto
+else
+    # mDP external screen (DP1)
+    xrandr --output "$intern" --off --output "$extern" --auto
+fi

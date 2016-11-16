@@ -1,0 +1,27 @@
+# Disable right click area on Trackpad.
+synclient RightButtonAreaLeft=5400 &
+
+# Set keyboard map for US International.
+setxkbmap -layout us -variant intl &
+
+# Set a beautiful and big cursor
+xsetroot -xcf /usr/share/icons/Adwaita/cursors/left_ptr 32 &
+
+# Set the X root window background color to default black
+# i used hsetroot because xsetroot is buggy with compton
+hsetroot -solid black &
+
+# Load PCManFM daemon, for automounting
+pcmanfm -d &
+
+# Compositing manager
+compton -b &
+
+# monitor auto setup
+source ~/env/scripts/monitor &
+
+# Load shortcuts
+sxhkd &
+
+# Load Window Manager
+exec bspwm

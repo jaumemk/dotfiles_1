@@ -1,5 +1,11 @@
 ! ------------------------------------------
-! Basic Color theme
+! Basic X Properties
+! ------------------------------------------
+
+Xcursor.size: 32
+
+! ------------------------------------------
+! Basic X Color theme
 ! ------------------------------------------
 
 *.foreground:   #d0d0d0
@@ -49,11 +55,21 @@ URxvt.scrollBar:        false
 URxvt.internalBorder:   25
 
 ! -------------------------------------------
-! rofi Color theme
+! rofi setup & colors
 ! -------------------------------------------
 
 rofi.color-enabled:     true
-rofi.color-window:      argb:dd151515, #151515, #151515
+rofi.color-window:      argb:dd151515, #151515, argb:00151515
 rofi.color-normal:      argb:00151515, #d0d0d0, argb:00151515, #ac4142, #d0d0d0
 rofi.color-active:      #ebebeb, #151515, #ebebeb, #90a959, #ebebeb
 rofi.color-urgent:      #151515, #dc322f, #151515, #dc322f, #ffffff
+
+rofi.font:              Hack 18
+rofi.separator-style:   none
+rofi.fullscreen:        true
+rofi.hide-scrollbar:    true
+rofi.bw:                0 ! border width
+rofi.eh:                1 ! element height
+rofi.line-margin:       10
+rofi.padding:           350
+

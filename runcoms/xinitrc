@@ -19,7 +19,6 @@ pcmanfm -d &
 # Compositing manager
 compton -b &
 
-# Load shortcuts
 sxhkd -c ~/Environement/runcoms/sxhkdrc &
 
 # Load Window Manager

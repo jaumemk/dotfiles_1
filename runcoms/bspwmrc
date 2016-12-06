@@ -1,6 +1,6 @@
-#! /bin/bash
+#! /bin/sh
 
-. ~/Environement/scripts/environement
+~/Environement/scripts/environement &
 
 bspc config remove_disabled_monitors true
 bspc config remove_unplugged_monitors true
@@ -18,5 +18,3 @@ for m in $(bspc query -M); do
     bspc monitor $m -d eins zwei drei vier fünf # sechs sieben acht neun zhen
     bspc config -m $m top_padding 40
 done
-
-. ~/Environement/scripts/panel/panel

@@ -2,14 +2,17 @@
 
 PANEL_FIFO=/tmp/panel-fifo
 PANEL_HEIGHT=40
-PANEL_FONT='xft:Hack:size=16'
+PANEL_FONT='xft:Hack:size=12'
 PANEL_ICONS='FontAwesome:size=16'
 PANEL_WM_NAME=bspwm_panel
 export PANEL_FIFO PANEL_HEIGHT PANEL_FONT PANEL_WM_NAME
 
 if xdo id -a "$PANEL_WM_NAME" > /dev/null ; then
-    killall lemonbar
+
+    exit 1
 fi
+
+. ~/Environement/scripts/panel/panel_colors
 
 trap 'trap - TERM; kill 0' INT TERM QUIT EXIT
 
@@ -17,10 +20,9 @@ trap 'trap - TERM; kill 0' INT TERM QUIT EXIT
 mkfifo "$PANEL_FIFO"
 
 bspc subscribe report > "$PANEL_FIFO" &
-echo -e 'S '$(date "+%a %b %d, %T") > "$PANEL_FIFO" &
 echo -e 'T '$USER'@'$HOST > "$PANEL_FIFO" &
 
-. ~/Environement/scripts/panel/panel_colors
+. ~/Environement/scripts/panel/widgets/clock &
 
 ~/Environement/scripts/panel/panel_bar < "$PANEL_FIFO" | lemonbar -a 32 -n "$PANEL_WM_NAME" -g x$PANEL_HEIGHT -f "$PANEL_FONT" -F "$COLOR_DEFAULT_FG" -B "$COLOR_DEFAULT_BG" | sh &
 

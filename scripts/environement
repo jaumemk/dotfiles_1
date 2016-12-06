@@ -1,4 +1,3 @@
 #! /bin/sh
 
-. ~/Environement/scripts/monitor &&
-. ~/Environement/scripts/wallpaper
+~/Environement/scripts/monitor && ~/Environement/scripts/wallpaper && exec xfce4-panel
